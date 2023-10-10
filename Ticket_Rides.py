@@ -6,9 +6,12 @@ bill=0
 if height >= 120:
     print ("You can ride! Do not puke.")
     age=int(input("Enter your age- "))
-    if age>18:
+    if age>18 and age<=45:
         bill=12
         print("Pay 12 Dollars")
+    elif age >45 and age<55:
+        bill=0
+        print ("pay 0 for the tickets")
     elif age<12:
         bill=5
         print("Pay 5 Dollars")

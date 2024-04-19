@@ -1,0 +1,17 @@
+arr=[100,185,260,445,563,700,820,900,910]
+target=185
+
+low=0
+high=len(arr)-1
+
+while (low<=high):
+    mid=(high+low)//2
+    if arr[mid]==target:
+        print ("This is the target where the target is " +str(target) + " and the index is " + str(mid))
+        break
+    elif arr[mid]>target:
+        print ("Mid is greater than target, new high will be mid-1")
+        high=mid-1
+    elif arr[mid]<target:
+        print ("Mid is lower than target, new low would be mid+1")
+        low=mid+1
